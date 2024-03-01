@@ -1,0 +1,39 @@
+service: my-serverless-service
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 4000
+
+functions:
+  user:
+    handler: user/route/handler.handler
+    events:
+      - http:
+          path: user/v1/user
+          method: get
+      - http:
+          path: user/v1/register
+          method: post
+      - http:
+          path: user/v1/login
+          method: post
+      - http:
+          path: user/v1/business-register
+          method: post
+      - http:
+          path: user/v1/verify-user
+          method: post
+  product:
+    handler: handler.handler
+    events:
+      - http:
+          path: product/v1/product
+          method: get

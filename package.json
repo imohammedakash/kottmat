@@ -30,9 +30,13 @@
     "nodemailer": "^6.9.7",
     "nodemon": "^3.0.1",
     "pg": "^8.11.3",
+    "serverless": "^3.38.0",
     "sharp": "^0.32.6",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "serverless-offline": "^13.3.3"
   }
 }
